@@ -1,0 +1,461 @@
+/* Enhanced SearchBox.css - Beautiful Gradient Design */
+
+.SearchBox {
+    padding: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #9d4edd 100%);
+    border-radius: 24px;
+    color: white;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+/* Animated gradient background */
+.SearchBox::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shimmer 8s infinite linear;
+    pointer-events: none;
+}
+
+.SearchBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.15),
+        inset 0 0 60px rgba(255, 255, 255, 0.05);
+}
+
+.SearchBox h3 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+    background: linear-gradient(to right, #ffffff, #e2e2e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.SearchBox h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    border-radius: 2px;
+}
+
+.SearchBox form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.SearchBox form:hover {
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transform: scale(1.01);
+}
+
+/* Input field styling */
+.SearchBox .MuiTextField-root {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.SearchBox .MuiOutlinedInput-root {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.SearchBox .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #667eea;
+    border-width: 2px;
+}
+
+.SearchBox .MuiOutlinedInput-root.Mui-focused {
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.SearchBox .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(102, 126, 234, 0.3);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.SearchBox .MuiInputLabel-root {
+    color: #667eea;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.SearchBox .MuiInputLabel-root.Mui-focused {
+    color: #764ba2;
+    font-weight: 600;
+}
+
+.SearchBox .MuiInputBase-input {
+    padding: 16px 14px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Button styling */
+.SearchBox .MuiButton-root {
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 
+        0 6px 20px rgba(102, 126, 234, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    border: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.SearchBox .MuiButton-root::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.SearchBox .MuiButton-root:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 
+        0 12px 30px rgba(102, 126, 234, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.SearchBox .MuiButton-root:hover::before {
+    left: 100%;
+}
+
+.SearchBox .MuiButton-root:active {
+    transform: translateY(-1px) !important;
+}
+
+.SearchBox .MuiButton-root:disabled {
+    background: linear-gradient(135deg, #cccccc 0%, #aaaaaa 100%) !important;
+    color: #888888 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.SearchBox .MuiButton-root:disabled:hover::before {
+    left: -100%;
+}
+
+/* Typography styling */
+.SearchBox .MuiTypography-h4 {
+    color: white !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+    font-size: 2.5rem !important;
+}
+
+.SearchBox .MuiTypography-subtitle1 {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 400 !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1.1rem !important;
+    letter-spacing: 0.3px;
+}
+
+/* Loading spinner styling */
+.SearchBox .MuiCircularProgress-root {
+    color: white !important;
+}
+
+/* Error message styling */
+.SearchBox .MuiAlert-root {
+    border-radius: 12px !important;
+    margin-top: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Decorations */
+.weather-decoration {
+    position: absolute;
+    opacity: 0.1;
+    font-size: 2rem;
+    z-index: 0;
+}
+
+.weather-decoration:nth-child(1) { top: 20px; left: 20px; }
+.weather-decoration:nth-child(2) { top: 20px; right: 20px; }
+.weather-decoration:nth-child(3) { bottom: 20px; left: 20px; }
+.weather-decoration:nth-child(4) { bottom: 20px; right: 20px; }
+
+/* Animations */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .SearchBox {
+        padding: 20px;
+        margin: 10px;
+        border-radius: 20px;
+    }
+    
+    .SearchBox h3 {
+        font-size: 1.8rem;
+    }
+    
+    .SearchBox form {
+        padding: 20px;
+    }
+    
+    .SearchBox .MuiTypography-h4 {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .SearchBox {
+        padding: 15px;
+        border-radius: 16px;
+    }
+    
+    .SearchBox h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .SearchBox form {
+        padding: 15px;
+    }
+    
+    .SearchBox .MuiInputBase-input {
+        padding: 14px 12px;
+        font-size: 1rem;
+    }
+    
+    .SearchBox .MuiButton-root {
+        padding: 14px 20px;
+        font-size: 1rem !important;
+    }
+}
+
+/* Add these decorative weather icons (optional) */
+.SearchBox::after {
+    content: '☀️ 🌤️ ⛅ 🌧️ ⛈️ 🌩️ 🌨️';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0.1;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+}
+
+/* Custom scrollbar for the form (if needed) */
+.SearchBox form::-webkit-scrollbar {
+    width: 6px;
+}
+
+.SearchBox form::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.SearchBox form::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+}
+
+/* Focus effects */
+.SearchBox .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #764ba2 !important;
+    border-width: 2px !important;
+    box-shadow: 0 0 0 4px rgba(118, 75, 162, 0.1);
+}
+
+/* Helper text styling */
+.SearchBox .MuiFormHelperText-root {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Success state (optional for future use) */
+.SearchBox .success-message {
+    background: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: #2e7d32;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   DARK MODE – SEARCHBOX
+   ========================= */
+
+/* Container */
+@media (prefers-color-scheme: dark) {
+    .SearchBox {
+        background: linear-gradient(
+            135deg,
+            #1e3c72 0%,
+            #2a5298 50%,
+            #3f72af 100%
+        );
+        box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.6),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+}
+
+/* Manual dark mode */
+[data-theme="dark"] .SearchBox {
+    background: linear-gradient(
+        135deg,
+        #1b2a41 0%,
+        #243b55 50%,
+        #141e30 100%
+    );
+}
+
+/* Form glass */
+@media (prefers-color-scheme: dark) {
+    .SearchBox form {
+        background: rgba(20, 25, 40, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}
+
+[data-theme="dark"] .SearchBox form {
+    background: rgba(15, 20, 35, 0.9);
+}
+
+/* Input field dark */
+@media (prefers-color-scheme: dark) {
+    .SearchBox .MuiOutlinedInput-root {
+        background: rgba(30, 35, 55, 0.95);
+    }
+
+    .SearchBox .MuiInputBase-input {
+        color: #eaeaea;
+    }
+
+    .SearchBox .MuiInputLabel-root {
+        color: #b6c2ff;
+    }
+}
+
+/* Button stays vibrant in dark */
+@media (prefers-color-scheme: dark) {
+    .SearchBox .MuiButton-root {
+        background: linear-gradient(
+            135deg,
+            #6a85ff 0%,
+            #8e54e9 100%
+        ) !important;
+        box-shadow:
+            0 12px 35px rgba(106, 133, 255, 0.45);
+    }
+}
+
+/* Weather card text */
+@media (prefers-color-scheme: dark) {
+    .SearchBox .MuiTypography-h4,
+    .SearchBox .MuiTypography-h5,
+    .SearchBox .MuiTypography-subtitle1 {
+        color: #f1f1f1 !important;
+    }
+}
+
+/* Alert dark */
+@media (prefers-color-scheme: dark) {
+    .SearchBox .MuiAlert-root {
+        background: rgba(255, 80, 80, 0.15);
+        color: #ffb4b4;
+        border: 1px solid rgba(255, 100, 100, 0.3);
+    }
+}
